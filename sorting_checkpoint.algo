@@ -1,0 +1,18 @@
+ALGORITHM SORT_ARR
+VAR
+    arr, arr2: ARRAY OF INTEGER[100]
+    key, i, j, n: INTEGER
+
+BEGIN
+    FOR i FROM 0 TO arr.length-1 DO
+        key := arr[i]
+        j := i - 1
+
+        WHILE (j >= 0 AND key < arr[j]) DO
+            arr[j + 1] := arr[j]
+            j := j - 1
+        END WHILE
+
+        arr[j + 1] := key
+    END FOR
+END
